@@ -1,0 +1,101 @@
+.gettyimages-1216259682-2048x20-icon {
+    position: absolute;
+    top: -2px;
+    left: calc(50% - 920.5px);
+    width: 1440px;
+    height: 822px;
+    object-fit: cover;
+  }
+  .start-your-unforgettable {
+    margin: 0;
+  }
+  .start-your-unforgettable-container {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1385px);
+    display: inline-block;
+    width: 968px;
+    cursor: pointer;
+  }
+  .start-your-unforgettable-journ-wrapper {
+    position: absolute;
+    top: 230px;
+    left: 236px;
+    width: 968px;
+    height: 224px;
+    overflow: hidden;
+  }
+  .girl-1-icon {
+    position: absolute;
+    top: 230px;
+    left: 0;
+    width: 1301px;
+    height: 592px;
+    object-fit: cover;
+  }
+  .screenshot-2024-05-08-234541-r-icon {
+    position: absolute;
+    top: 0;
+    left: 320px;
+    width: 734px;
+    height: 94px;
+    object-fit: cover;
+  }
+  .home {
+    position: relative;
+    line-height: 150%;
+    font-weight: 500;
+  }
+  .button,
+  .items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .button {
+    box-shadow: var(--button-shadow);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-black);
+    justify-content: center;
+    padding: var(--padding-sm) var(--padding-5xl);
+    font-size: var(--small-text-size);
+    color: var(--color-white);
+  }
+  .items {
+    position: absolute;
+    top: 115px;
+    right: 618px;
+    width: 519px;
+    height: 52px;
+    justify-content: flex-end;
+    gap: var(--spacing-m);
+  }
+  .screenshot-2024-05-08-234541-r-parent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1841px;
+    height: 1029px;
+    font-size: var(--body-text-size);
+    color: var(--color-black);
+    font-family: var(--small-text);
+  }
+  .gettyimages-1216259682-2048x20-parent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1841px;
+    height: 1029px;
+    cursor: pointer;
+  }
+  .desktop-1 {
+    width: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    height: 1024px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-65xl);
+    color: var(--color-white);
+    font-family: var(--font-playfair-display);
+  }

@@ -1,0 +1,33 @@
+/* Container for the entire page */
+.community-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height */
+  background-color: #f4f4f4; /* Background color for contrast */
+  padding: 20px; /* Some padding around the container */
+}
+
+.image-container {
+  margin-right: 20px; /* Space between the image and text */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
+}
+
+.text-container h1 {
+  font-size: 2.5rem; /* Increase font size */
+  color: #333; /* Darker text color */
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the text */
+  padding: 10px 20px;
+}
