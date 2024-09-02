@@ -55,6 +55,50 @@ router.post('/createuser', [
     }
 });
 
+
+//route to edit user
+// Route to update user details
+router.put('/updateuser', fetchuser, [
+    body('name', 'Enter valid name').isLength({ min: 3 }),
+    body('email', 'Enter valid email').isEmail(),
+    body('address', 'Address is required').not().isEmpty(),
+    body('state', 'State is required').not().isEmpty(),
+    body('street', 'Street is required').not().isEmpty(),
+    body('phoneNumber', 'Phone number is required').not().isEmpty(),
+    body('preferredDestinations', 'Preferred destinations are required').not().isEmpty(),
+    body('whereDidYouHearAboutUs', 'This field is required').not().isEmpty(),
+    body('gender', 'Gender is required').not().isEmpty()
+], async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+    }
+    
+    try {
+        const { name, email, address, state, street, phoneNumber, preferredDestinations, whereDidYouHearAboutUs, gender } = req.body;
+
+        // Create a new user object
+        const newUser = {};
+        if (name) newUser.name = name;
+        if (email) newUser.email = email;
+        if (address) newUser.address = address;
+        if (state) newUser.state = state;
+        if (street) newUser.street = street;
+        if (phoneNumber) newUser.phoneNumber = phoneNumber;
+        if (preferredDestinations) newUser.preferredDestinations = preferredDestinations;
+        if (whereDidYouHearAboutUs) newUser.whereDidYouHearAboutUs = whereDidYouHearAboutUs;
+        if (gender) newUser.gender = gender;
+
+        // Find the user and update
+        let user = await User.findByIdAndUpdate(req.user.id, { $set: newUser }, { new: true });
+        res.json(user);
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Internal server error");
+    }
+});
+
+
 // Route to authenticate a user
 router.post('/login', [
     body('email', 'Enter valid email').isEmail(),
